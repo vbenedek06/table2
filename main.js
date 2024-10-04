@@ -83,7 +83,7 @@ for(const person of array){
         firstname2.innerHTML = person.firstname2
         tr.appendChild(firstname2)
 
-    }
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 
     const married = document.createElement('td')
     tablebody.appendChild(tr)
@@ -95,7 +95,13 @@ for(const person of array){
     tablebody.appendChild(tr)
     tr.appendChild(pet)
     firstname.innerHTML = person.pet
-    pet.innerHTML = person.pet
+    pet.innerHTML = person.pet     
+    
+    if (person.married === true){
+        married.innerHTML = "igen"
+    }else{
+        married.p
+    }
 
     
     tr.addEventListener('click',function(e){
@@ -108,3 +114,16 @@ for(const person of array){
         e.currentTarget.classList.add('selected')
     })
 }
+
+const form = document.getElementById(form)
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const lastname = document.getElementById('lastname')
+    const firstname1 = document.getElementById('firstname1')
+    const firstname2 = document.getElementById('firstname2')
+    const pet = document.getElementById('pet')
+    const married = document.getElementById('married')
+    
+
+    
+})
