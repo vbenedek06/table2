@@ -65,4 +65,14 @@ for(const person of array){
         tr.appendChild(firstname2)
 
     }
+    
+    tr.addEventListener('click',function(e){
+        console.log('click')
+       
+        const ez = tablebody.querySelector('.selected')
+        if (ez!=undefined){
+            ez.classList.remove('selected')
+        } 
+        e.currentTarget.classList.add('selected')
+    })
 }
