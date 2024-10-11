@@ -87,7 +87,7 @@ form.addEventListener('submit', function (e) {
         pet: petvalue
 
     }
-
+    if (validatefields(firstname,lastname,pet))
     array.push(newperson)
     console.log(array)
     tablebody.innerHTML = ""
@@ -151,6 +151,38 @@ function rendertable() {
             e.currentTarget.classList.add('selected')
         })
 
+
+        
+
     }
 
+}
+function validatefields(lastname,firstname,pet){
+    let result = true
+    if(lastname.value === ""){
+        const par = lastname.parentElement
+        const error = par.querySelector(".error")
+        error.innerHTML = "kötelező vezetéknév"
+        result = false
+
+        
+    }
+    if(firstname.value === ""){
+        const par = firstname.parentElement
+        const error = par.querySelector(".error")
+        error.innerHTML = "kötelező keresztnév"
+        result = false
+
+        
+    }
+    if(pet.value === ""){
+        const par = pet.parentElement
+        const error = par.querySelector(".error")
+        error.innerHTML = "kötelező háziállat"
+        result = false
+
+        
+    }
+    return result
+            
 }
