@@ -97,21 +97,16 @@ rendertable()
 function rendertable() {
     for (const person of array) {
         const tr = document.createElement('tr')
-
-        const lastname = document.createElement('td')
         tablebody.appendChild(tr)
+        const lastname = document.createElement('td')
+        
         tr.appendChild(lastname)
         lastname.innerHTML = person.lastname
 
         const firstname = document.createElement('td')
-        tablebody.appendChild(tr)
         tr.appendChild(firstname)
         firstname.innerHTML = person.firstname1
-
-
-
-
-        tablebody.appendChild(tr)
+        
 
 
         if (person.firstname2 === undefined) {
@@ -158,6 +153,12 @@ function rendertable() {
 
 }
 function validatefields(lastname,firstname,pet){
+
+    let valtozo = form.querySelectorAll('.error')
+    for(const error of valtozo){
+        error.innerHTML = ""
+    }
+    innerHTML= ""
     let result = true
     if(lastname.value === ""){
         const par = lastname.parentElement
