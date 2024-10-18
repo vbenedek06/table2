@@ -187,3 +187,12 @@ function validatefields(lastname,firstname,pet){
     return result
             
 }
+
+function CreateTablecell(element,inner,parent)
+{
+    const elem = document.createElement(element)
+    tr.appendChild(elem)
+    elem.innerHTML = inner
+    parent.appendChild(elem)
+
+}
